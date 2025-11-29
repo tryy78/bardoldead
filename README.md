@@ -1,0 +1,2 @@
+# bardoldead
+Jngn salah gunakan 
