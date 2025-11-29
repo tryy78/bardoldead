@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🔥 Report Center - Unlimited System</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(140deg, black, #1b1b1b, #3b0000);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        color: white;
+    }
+
+    .box {
+        background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 30px;
+        width: 350px;
+        box-shadow: 0 0 25px red;
+        transform: perspective(1000px) rotateX(10deg) rotateY(-10deg);
+        transition: 0.4s;
+    }
+
+    .box:hover {
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1.05);
+        box-shadow: 0 0 45px red;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 12px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        font-size: 15px;
+    }
+
+    textarea {
+        height: 100px;
+        resize: none;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 15px;
+        padding: 12px;
+        background: red;
+        border: none;
+        font-size: 18px;
+        color: white;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: rgb(255, 72, 72);
+        transform: scale(1.1);
+        box-shadow: 0 0 20px red;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-shadow: 0px 0px 15px red;
+    }
+
+    .success {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 15px;
+        color: lime;
+        display: none;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <div class="title">⚠ Report System 3D ⚠</div>
+    
+    <input type="text" id="username" placeholder="Username Target">
+
+    <select id="platform">
+        <option disabled selected>Pilih Platform</option>
+        <option>Facebook</option>
+        <option>Instagram</option>
+        <option>TikTok</option>
+        <option>YouTube</option>
+        <option>Telegram</option>
+        <option>Twitter (X)</option>
+    </select>
+
+    <textarea id="reason" placeholder="Alasan Pelaporan..."></textarea>
+    
+    <button onclick="submitReport()">🚨 Submit Unlimited</button>
+
+    <div class="success" id="successText">🔥 Report Terkirim Brutal! 🔥</div>
+</div>
+
+<script>
+function submitReport() {
+    let username = document.getElementById("username").value;
+    let platform = document.getElementById("platform").value;
+    let reason = document.getElementById("reason").value;
+
+    if (!username || platform === "Pilih Platform" || !reason) {
+        alert("⚠ Harap isi semua data sebelum melanjutkan!");
+        return;
+    }
+
+    document.getElementById("successText").style.display = "block";
+    
+    setTimeout(() => {
+        alert(`🔥 REPORT SENT 🔥
+
+Target: ${username}
+Platform: ${platform}
+Status: Unlimited Dewa Mode Activated 💀
+
+Tunggu 1-5 menit untuk efek.`);
+    }, 500);
+}
+</script>
+
+</body>
+</html>
